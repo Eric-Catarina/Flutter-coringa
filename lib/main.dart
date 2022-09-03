@@ -1,27 +1,17 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
+void Main(){
+  runApp(AppCoringa());
 }
 
-class MyApp extends StatelessWidget{
+class AppCoringa extends StatelessWidget{
   @override
-  Widget build(BuildContext context){
+  Widget build (BuildContext context){
     return Container(
       child: Center(
-        child: MeuTexto(),
-      ),
-    );
-  }
-}
-
-class MeuTexto extends StatelessWidget{
-  @override
-  Widget build(BuildContext){
-    return Container(
-      child: Text(
-        "Texto da Classe",
+        child: Text("Meu texto",
         textDirection: TextDirection.rtl,
+        ),
       ),
     );
   }
