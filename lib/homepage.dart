@@ -19,25 +19,53 @@ class _HomePageState extends State<HomePage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF55b9f3),
       appBar: AppBar(
         title: Text("Fazendo o Curso :D"),
       ),
       body: Center(
-
-          child: SingleChildScrollView(
-            child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-            PilhaQuadrados(),
-              PilhaQuadrados(),
-              PilhaQuadrados(),
-              PilhaQuadrados(),
-              PilhaQuadrados(),
-              PilhaQuadrados(),
-        ],),
+        child:QuadradoNeumorfico(),
           )
-      ),
-    );
+      );
+  }
+}
+
+
+class QuadradoNeumorfico extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+   return Container(
+     child:Icon(
+       Icons.home,
+       size: 80,
+       color: Colors.white,
+     ),
+     width: 200,
+     height: 200,
+     decoration: BoxDecoration(
+       gradient: LinearGradient(
+           begin: Alignment(-1.0, -4.0),
+           end: Alignment(1.0, 4.0),
+           colors: [
+             Color(0xFF5bc6ff),
+             Color(0xFF4da7db),
+           ]
+       ),
+       borderRadius:  BorderRadius.all(Radius.circular(35)),
+       boxShadow: [
+         BoxShadow(
+             color: Color(0xFF4ca5d8),
+             offset: Offset(5.0, 5.0),
+             blurRadius: 15.0,
+             spreadRadius: 1.0),
+         BoxShadow(
+             color: Color(0xFF5ecdff),
+             offset: Offset(-5.0, -5.0),
+             blurRadius: 15.0,
+             spreadRadius: 1.0),
+       ]
+     ),
+   );
   }
 
 }
@@ -51,7 +79,8 @@ class Quadrado extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 65,
+      margin: EdgeInsets.all(10),
+      width: double.infinity,
       height: 65,
       color: cor,
     );
@@ -61,6 +90,9 @@ class Quadrado extends StatelessWidget{
 
 class PilhaQuadrados extends StatelessWidget{
 
+
+
+  
   @override
   Widget build(BuildContext context) {
     return Column(children: [
