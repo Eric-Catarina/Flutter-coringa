@@ -20,29 +20,37 @@ class _HomePageState extends State<HomePage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("banaana"),
+        title: Text("Fazendo o Curso :D"),
       ),
       body: Center(
-        child:
-        Text('Amongus $contador',
-            textDirection: TextDirection.ltr
+        child: Column(children: [
+          Quadrado(Colors.amberAccent),
+          Quadrado(Colors.blueGrey),
+        ],
         ),
       ),
-      floatingActionButton: FloatingActionButton (
-        child: Icon(
-          Icons.favorite_outline_sharp,
-          color: Colors.red,
-        ),
-        onPressed: () {
-          setState(() {
-            contador ++;
-          });
-        },
-      ),
+
     );
 
   }
 
 }
 
+class Quadrado extends StatelessWidget{
+  
+  Color cor;
+
+  Quadrado(this.cor);
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 80,
+      height: 80,
+      color: cor,
+    );
+  }
+
+}
 
