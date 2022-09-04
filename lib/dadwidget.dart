@@ -5,6 +5,6 @@ class DadWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return HomePageWidget();
+    return HomePage();
   }
 }
