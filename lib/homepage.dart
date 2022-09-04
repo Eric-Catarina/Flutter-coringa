@@ -9,7 +9,7 @@ class HomePageWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context){
 
-    final controller = context.dependOnInheritedWidgetOfExactType<HomeController>()!;
+    final controller = HomeController.of(context);
 
     return Scaffold(
         appBar: AppBar(
