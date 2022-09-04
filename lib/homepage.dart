@@ -5,22 +5,37 @@ class HomePageWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("banaana"),
+
+    return Container(
+        color: Colors.grey.shade300,
+      height: 200,
+      width: 300,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.grey.shade300,
+        boxShadow: [
+          BoxShadow(offset: Offset(10,10),
+            color: Colors.black38,
+            blurRadius: 20)
+        ]
       ),
-      body: Center(
-        child:
-        Text("Amongus",
-            textDirection: TextDirection.rtl
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("banaana"),
         ),
-      ),
-      floatingActionButton: FloatingActionButton (
-        child: Icon(
-          Icons.favorite_outline_sharp,
-          color: Colors.red,
+        body: Center(
+          child:
+          Text("Amongus",
+              textDirection: TextDirection.rtl
+          ),
         ),
-        onPressed: () {print("cliclou");},
+        floatingActionButton: FloatingActionButton (
+          child: Icon(
+            Icons.favorite_outline_sharp,
+            color: Colors.red,
+          ),
+          onPressed: () {print("cliclou");},
+        ),
       ),
     );
   }
